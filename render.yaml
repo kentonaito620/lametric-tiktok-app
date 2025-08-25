@@ -1,0 +1,7 @@
+# render.yaml
+services:
+  - type: web
+    name: lametric-tiktok-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 1 app:app
